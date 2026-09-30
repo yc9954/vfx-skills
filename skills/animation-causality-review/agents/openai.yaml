@@ -1,0 +1,6 @@
+interface:
+  display_name: "장면 전체 의심 검수"
+  short_description: "인물·도구·재료·물·소리와 검수의 허점까지 의심하는 장면 검수"
+  default_prompt: "Use $animation-causality-review to challenge every story-relevant interaction and prior validation claim in this animation, separate failures from unverified naturalness, and repair only what the current request authorizes."
+policy:
+  allow_implicit_invocation: true

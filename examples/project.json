@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "name": "sura",
+  "backend": "higgsfield",
+  "deliverable": {"kind": "projection_master", "seconds": 10, "width_mm": 1400, "height_mm": 800},
+  "stage": "generate",
+  "canonical_state": "Path to the existing film_state.json; do not duplicate its history here.",
+  "active_run": null,
+  "quality_approval": null
+}

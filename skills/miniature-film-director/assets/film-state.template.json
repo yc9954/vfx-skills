@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "revision": 0,
+  "updated_at": null,
+  "brief": {
+    "request": null,
+    "request_source": null,
+    "deliverable": null,
+    "duration_seconds": null,
+    "fps": null,
+    "resolution": null,
+    "audio": null
+  },
+  "stage": "reference",
+  "current": {"reference": null, "scene": null, "candidate": null},
+  "artifacts": [],
+  "checks": [],
+  "decisions": [],
+  "changes": [],
+  "runs": [],
+  "budget": null,
+  "open_issues": [],
+  "next_action": null
+}

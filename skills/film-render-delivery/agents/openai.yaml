@@ -1,0 +1,4 @@
+interface:
+  display_name: "영상 렌더·납품 검증"
+  short_description: "GPU 실측·안전한 재시작·영상 디코딩·편집 원본 납품 검증"
+  default_prompt: "$film-render-delivery로 승인된 장면을 렌더하고 재생 가능한 영상과 편집 원본을 전달해줘."

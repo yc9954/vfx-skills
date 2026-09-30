@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender → Seedance 연출"
+  short_description: "Blender 가이드와 외형 레퍼런스로 생성 영상의 연결·예산 관리"
+  default_prompt: "$blender-seedance-handoff로 이 Blender 가이드를 사용해 예산 안에서 짧은 영상부터 만들어줘."

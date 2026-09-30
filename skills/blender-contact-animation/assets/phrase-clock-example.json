@@ -1,0 +1,12 @@
+{
+  "description": "Original 16-second movement study; hypothetical 120 BPM clock, not extracted music or authenticated court dance. Planned, not generated.",
+  "fps": 30,
+  "frame_start": 1,
+  "beat_times_seconds": [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16],
+  "phrases": [
+    {"id": "greet_prepare", "beat_start": 0, "beat_end": 8, "intent": "Acknowledge the guests, settle, prepare a weight shift; hands empty", "end_state": "Stable left support; right leg free for a side step"},
+    {"id": "step_open", "beat_start": 8, "beat_end": 16, "intent": "Deliberate side steps and a readable arm arc, no automatic forward-facing correction", "end_state": "Planned right support and preparation for turning"},
+    {"id": "turn_replant", "beat_start": 16, "beat_end": 24, "intent": "Turn using a declared pivot and replant; preserve actual rotation history", "end_state": "Facing audience with decelerating torso; stable feet"},
+    {"id": "resolve_bow", "beat_start": 24, "beat_end": 32, "intent": "Let upper-body motion settle, acknowledge the audience and return from a small bow", "end_state": "Stable idle ready for the next action"}
+  ]
+}

@@ -1,0 +1,26 @@
+name: Offline checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: VFX Skills
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '${{ matrix.python }}'
+      - name: Offline regression tests
+        working-directory: VFX Skills
+        run: |
+          python -m unittest discover -s tests -v
+          python vfx.py skills validate
+          python tools/check_publish.py
+          python skills/blender-contact-animation/scripts/test_phrase_timing.py
+      - name: Execute from another working directory
+        run: python 'VFX Skills/vfx.py' route higgsfield generate

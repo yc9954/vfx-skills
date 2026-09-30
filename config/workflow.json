@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "skills": [
+    "miniature-film-director", "film-reference-breakdown", "visual-image", "visual-video",
+    "character-performance-animation", "human-motion-biomechanics", "food-vfx-director",
+    "blender-contact-animation", "blender-seedance-handoff", "animation-causality-review", "film-render-delivery"
+  ],
+  "routes": {
+    "higgsfield": {
+      "reference": ["film-reference-breakdown", "visual-image"],
+      "prompt": ["visual-video"],
+      "generate": ["blender-seedance-handoff"],
+      "review": ["animation-causality-review", "film-render-delivery"],
+      "deliver": ["film-render-delivery"]
+    },
+    "blender": {
+      "reference": ["film-reference-breakdown", "visual-image"],
+      "build": ["blender-contact-animation"],
+      "review": ["animation-causality-review"],
+      "render": ["film-render-delivery"],
+      "deliver": ["film-render-delivery"]
+    },
+    "hybrid": {
+      "reference": ["film-reference-breakdown", "visual-image"],
+      "build": ["blender-contact-animation"],
+      "prompt": ["visual-video"],
+      "generate": ["blender-seedance-handoff"],
+      "review": ["animation-causality-review", "film-render-delivery"],
+      "render": ["film-render-delivery"],
+      "deliver": ["film-render-delivery"]
+    }
+  },
+  "specialists": {
+    "acting": "character-performance-animation",
+    "human_motion": "human-motion-biomechanics",
+    "food": "food-vfx-director"
+  },
+  "rules": [
+    "Preserve the user's backend and complete deliverable; do not replace a requested film with a pilot.",
+    "Load only the current stage and required specialists. Reuse unchanged references and evidence.",
+    "A status request is read-only. A fresh render/generation requires task authority.",
+    "Quote is not approval. Approval belongs to one immutable request and one paid attempt.",
+    "Unknown submission consumes the local attempt until the provider reconciles it. Never auto-retry.",
+    "Technical completion, visual review and user approval are independent."
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 접촉·동작 제작"
+  short_description: "발걸음·그립·도구·재료의 인과관계를 갖춘 Blender 동작 제작"
+  default_prompt: "$blender-contact-animation으로 발 미끄러짐과 도구 관통 없이 이 동작을 만들어줘."

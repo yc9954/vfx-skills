@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Video · 촬영·CG 연출"
+  short_description: "촬영·편집·CG 전문용어를 투사 콘텐츠와 영상 프롬프트로 연결"
+  default_prompt: "$visual-video로 이 장면의 촬영·편집·CG 의도를 구체화하고, 투사용인지 촬영 영상인지 구분해 실행 가능한 프롬프트를 작성해줘."

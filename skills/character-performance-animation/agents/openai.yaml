@@ -1,0 +1,4 @@
+interface:
+  display_name: "Character Performance Animation"
+  short_description: "Design readable, organic character acting and performance."
+  default_prompt: "Use $character-performance-animation to turn this mechanical action into a personality-driven acting beat sheet."

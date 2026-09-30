@@ -1,0 +1,4 @@
+interface:
+  display_name: "Food VFX Director"
+  short_description: "음식·유체의 물성, 스케일, 인과성과 생성 영상 품질을 설계·검수"
+  default_prompt: "$food-vfx-director로 이 음식·유체 장면의 물성 브리프와 생성 프롬프트, 검수 기준을 만들어줘."

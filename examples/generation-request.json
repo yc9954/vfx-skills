@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "model": "seedance_2_5",
+  "params": {
+    "mode": "omni_reference",
+    "duration": 10,
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "generate_audio": true,
+    "prompt": "Replace with the current approved production brief, not this example."
+  },
+  "media": [{"flag": "image-references", "id": "REPLACE_WITH_EXISTING_UPLOAD_UUID"}],
+  "local_inputs": [],
+  "delivery": {"kind": "projection_master", "seconds": 10, "design_aspect": "7:4"}
+}

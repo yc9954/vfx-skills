@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Image · 질감과 외형"
+  short_description: "레퍼런스 질감·캐릭터·구도를 분석하고 생성 도구에 전달"
+  default_prompt: "$visual-image로 이 레퍼런스의 질감과 형태를 분석하고 요청한 이미지 제작에 적용해줘."

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="350" viewBox="0 0 760 350" role="img" aria-labelledby="title desc">
+  <title id="title">04 Review and delivery</title><desc id="desc">Keep visual review, technical verification and the user's approval separate. A completed generation job is not necessarily a finished film.</desc>
+  <rect width="760" height="350" rx="18" fill="#2a251e"/><rect x="1" y="1" width="758" height="348" rx="17" fill="none" stroke="#514838"/>
+  <g font-family="Inter, -apple-system, Segoe UI, sans-serif">
+    <text x="36" y="47" fill="#d4b47e" font-size="12" letter-spacing="3">04 / VERIFY THE ACTUAL RESULT</text>
+    <text x="36" y="99" fill="#f2eee6" font-size="33" font-weight="600">Review &amp; delivery</text>
+    <text x="36" y="135" fill="#c5baa8" font-size="17">A completed job is not the same as a finished film.</text>
+    <g fill="#332e25" stroke="#756345"><rect x="36" y="189" width="216" height="102" rx="9"/><rect x="272" y="189" width="216" height="102" rx="9"/><rect x="508" y="189" width="216" height="102" rx="9"/></g>
+    <g fill="#e7d4b4" font-size="19" font-weight="600"><text x="56" y="225">Visual review</text><text x="292" y="225">Technical</text><text x="528" y="225">User approval</text></g>
+    <g fill="#bcb1a1" font-size="14"><text x="56" y="253">Acting / contact</text><text x="56" y="275">Look / continuity</text><text x="292" y="253">Decode / dimensions</text><text x="292" y="275">Duration / tracks</text><text x="528" y="253">Story / intention</text><text x="528" y="275">Scope / version</text></g>
+    <text x="36" y="326" fill="#ac9876" font-size="12">SEPARATE EVIDENCE — EXPLICIT UNVERIFIED SCOPE</text>
+  </g>
+</svg>

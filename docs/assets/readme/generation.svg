@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="350" viewBox="0 0 760 350" role="img" aria-labelledby="title desc">
+  <title id="title">03 Guarded generation</title><desc id="desc">Prepare, quote, record a real user approval, submit once, and check status. An uncertain response must not trigger an automatic retry.</desc>
+  <rect width="760" height="350" rx="18" fill="#24232c"/><rect x="1" y="1" width="758" height="348" rx="17" fill="none" stroke="#4b4655"/>
+  <g font-family="Inter, -apple-system, Segoe UI, sans-serif">
+    <text x="36" y="47" fill="#b8a4da" font-size="12" letter-spacing="3">03 / GENERATE WITH BOUNDARIES</text>
+    <text x="36" y="99" fill="#f2eee6" font-size="33" font-weight="600">Guarded generation</text>
+    <text x="36" y="135" fill="#c0b8ce" font-size="17">One exact request. One approved attempt.</text>
+    <rect x="36" y="178" width="688" height="112" rx="10" fill="#191922" stroke="#494454"/>
+    <text x="59" y="210" fill="#cbb7e5" font-family="SFMono-Regular, Consolas, monospace" font-size="16">prepare → quote → approval → submit → status</text>
+    <text x="59" y="245" fill="#ddd7e4" font-size="16">Check inputs, account, current quote and cap.</text>
+    <text x="59" y="270" fill="#b2a4c0" font-size="14">Uncertain response? Reconcile. Do not auto-retry.</text>
+    <text x="36" y="326" fill="#a493b6" font-size="12">LOCAL SAFETY GUARDS — NO IMPLIED PAID AUTHORIZATION</text>
+  </g>
+</svg>

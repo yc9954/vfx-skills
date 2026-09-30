@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="350" viewBox="0 0 760 350" role="img" aria-labelledby="title desc">
+  <title id="title">01 Reference and performance</title><desc id="desc">Plan attention, preparation, action, and overlapping settlement using reference and acting skills.</desc>
+  <rect width="760" height="350" rx="18" fill="#102331"/><rect x="1" y="1" width="758" height="348" rx="17" fill="none" stroke="#344956"/>
+  <g font-family="Inter, -apple-system, Segoe UI, sans-serif">
+    <text x="36" y="47" fill="#d2b27a" font-size="12" letter-spacing="3">01 / DESIGN THE INTENT</text>
+    <text x="36" y="99" fill="#f2eee6" font-size="33" font-weight="600">Reference &amp; performance</text>
+    <text x="36" y="135" fill="#a9beca" font-size="17">From a visible action to a believable reason.</text>
+    <line x1="67" y1="220" x2="672" y2="220" stroke="#4b6474" stroke-width="2"/>
+    <g fill="#1d3b4c" stroke="#d2b27a" stroke-width="2"><circle cx="76" cy="220" r="18"/><circle cx="273" cy="220" r="18"/><circle cx="470" cy="220" r="18"/><circle cx="667" cy="220" r="18"/></g>
+    <g fill="#e5dac5" font-size="13" text-anchor="middle"><text x="76" y="225">1</text><text x="273" y="225">2</text><text x="470" y="225">3</text><text x="667" y="225">4</text></g>
+    <g fill="#cad7de" font-size="15" text-anchor="middle"><text x="76" y="262">Look</text><text x="273" y="262">Prepare</text><text x="470" y="262">Act</text><text x="667" y="262">Settle</text></g>
+    <text x="36" y="316" fill="#7f9aa9" font-size="13">OBSERVATION  /  KEY POSES  /  GAZE  /  TIMING  /  OVERLAP</text>
+  </g>
+</svg>

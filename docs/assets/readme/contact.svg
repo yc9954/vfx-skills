@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="350" viewBox="0 0 760 350" role="img" aria-labelledby="title desc">
+  <title id="title">02 Contact and motion</title><desc id="desc">Movement design checks support, grip, load transfer and settling instead of assuming a physics engine guarantees quality.</desc>
+  <rect width="760" height="350" rx="18" fill="#14262b"/><rect x="1" y="1" width="758" height="348" rx="17" fill="none" stroke="#344e53"/>
+  <g font-family="Inter, -apple-system, Segoe UI, sans-serif">
+    <text x="36" y="47" fill="#79bdb2" font-size="12" letter-spacing="3">02 / MAKE CONTACT MATTER</text>
+    <text x="36" y="99" fill="#f2eee6" font-size="33" font-weight="600">Contact &amp; motion</text>
+    <text x="36" y="135" fill="#a9c2c4" font-size="17">A hand closes. A load transfers. A body responds.</text>
+    <g fill="#1b363b" stroke="#476269"><rect x="36" y="190" width="328" height="43" rx="7"/><rect x="396" y="190" width="328" height="43" rx="7"/><rect x="36" y="247" width="328" height="43" rx="7"/><rect x="396" y="247" width="328" height="43" rx="7"/></g>
+    <g fill="#78bcb0"><circle cx="60" cy="212" r="4"/><circle cx="420" cy="212" r="4"/><circle cx="60" cy="269" r="4"/><circle cx="420" cy="269" r="4"/></g>
+    <g fill="#d8e4df" font-size="16"><text x="76" y="218">Foot support</text><text x="436" y="218">Grip before lift</text><text x="76" y="275">Weight &amp; balance</text><text x="436" y="275">Clearance &amp; continuity</text></g>
+    <text x="36" y="326" fill="#7d9e9f" font-size="12">DESIGN CONDITIONS — NOT AN AUTOMATIC PHYSICS PASS</text>
+  </g>
+</svg>

@@ -34,6 +34,7 @@ description: Coordinate end-to-end miniature tabletop film production or resume 
 | 단계 | 스킬 | 필요한 결과 |
 |---|---|---|
 | 레퍼런스의 동작·소품·질감 관찰 | `film-reference-breakdown` | 시간표, 엔티티 목록, 관찰/추론 구분 |
+| 뜬금없는 등장·행동·효과·전환의 사전 설계 | [animation-causal-staging](../animation-causal-staging/SKILL.md) | 등장 근거, 트리거→경로→결과, 지속 상태와 전환 전/가림/공개/후 이미지; 실제 행동과 편집 구분 |
 | 장면 목적·감정·성격을 살아 있는 연기로 설계 | `character-performance-animation` | thought/emotional beat, key pose, timing, gaze/face, secondary motion이 담긴 performance contract |
 | 사람 동작의 ROM·그립·하중·균형 명세 | `human-motion-biomechanics` | 제작·프롬프트·검수가 공유할 compact motion contract |
 | 새 이야기의 화면·프롬프트 연출 | `visual-video` | performance/motion contract를 카메라·빛·편집과 관찰 가능한 생성문으로 변환 |
@@ -68,6 +69,11 @@ description: Coordinate end-to-end miniature tabletop film production or resume 
 설치되지 않아도 제작을 막지 않는다. 목표 행동과 사용자 제약이 프롬프트 관례보다 우선이다.
 
 ## 제작 순서와 중단 기준
+
+이 테이블 시리즈의 기본 제작 루프는 [collaborative-production-loop.md](references/collaborative-production-loop.md)를 따른다.
+러프안→질문/기획 보완→이미지 콘티→전체 단순 메시 프리비즈→나란히 대조/최종 컨펌→
+Higgsfield 제작→실제 후보 검수이며, 의도 불일치는 자동 재결제 없이 기획 대화로 돌아온다.
+상태/조사만 요청된 경우 제작 루프를 시작하지 않는다.
 
 1. 기존 자산을 검토해 재사용한다. 라이선스·리깅·텍스처가 확인된 것부터 쓴다.
    무료 다운로드 가능과 상업적 투사·배포 권한은 구분한다.

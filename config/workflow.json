@@ -2,11 +2,14 @@
   "schema": 1,
   "skills": [
     "miniature-film-director", "film-reference-breakdown", "visual-image", "visual-video",
-    "character-performance-animation", "human-motion-biomechanics", "food-vfx-director",
+    "animation-causal-staging", "character-performance-animation", "human-motion-biomechanics", "food-vfx-director",
     "blender-contact-animation", "blender-seedance-handoff", "animation-causality-review", "film-render-delivery"
   ],
   "routes": {
     "higgsfield": {
+      "plan": ["miniature-film-director", "animation-causal-staging"],
+      "storyboard": ["visual-video", "visual-image", "animation-causal-staging"],
+      "previs": ["blender-contact-animation", "film-render-delivery"],
       "reference": ["film-reference-breakdown", "visual-image"],
       "prompt": ["visual-video"],
       "generate": ["blender-seedance-handoff"],
@@ -14,6 +17,9 @@
       "deliver": ["film-render-delivery"]
     },
     "blender": {
+      "plan": ["miniature-film-director", "animation-causal-staging"],
+      "storyboard": ["visual-video", "visual-image", "animation-causal-staging"],
+      "previs": ["blender-contact-animation", "film-render-delivery"],
       "reference": ["film-reference-breakdown", "visual-image"],
       "build": ["blender-contact-animation"],
       "review": ["animation-causality-review"],
@@ -21,6 +27,9 @@
       "deliver": ["film-render-delivery"]
     },
     "hybrid": {
+      "plan": ["miniature-film-director", "animation-causal-staging"],
+      "storyboard": ["visual-video", "visual-image", "animation-causal-staging"],
+      "previs": ["blender-contact-animation", "film-render-delivery"],
       "reference": ["film-reference-breakdown", "visual-image"],
       "build": ["blender-contact-animation"],
       "prompt": ["visual-video"],
@@ -31,6 +40,7 @@
     }
   },
   "specialists": {
+    "causal_staging": "animation-causal-staging",
     "acting": "character-performance-animation",
     "human_motion": "human-motion-biomechanics",
     "food": "food-vfx-director"

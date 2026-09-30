@@ -9,12 +9,12 @@ Blender와 생성형 영상 도구를 연결해 검수 가능한 결과물로 �
 
 <p>
   <img alt="Python 3.10 이상" src="https://img.shields.io/badge/Python-3.10%2B-3978a8?style=flat-square">
-  <img alt="11 specialist skills" src="https://img.shields.io/badge/Specialist_skills-11-c49b53?style=flat-square">
+  <img alt="12 specialist skills" src="https://img.shields.io/badge/Specialist_skills-12-c49b53?style=flat-square">
   <img alt="Reference first" src="https://img.shields.io/badge/Workflow-Reference_first-246b69?style=flat-square">
   <img alt="Private workspace" src="https://img.shields.io/badge/Workspace-Private-475569?style=flat-square">
 </p>
 
-[시작하기](#quick-start) · [제작 흐름](#workflow) · [스킬 11개](#skills) · [Kimodo 현황](#kimodo) · [실행 가이드](#generation) · [문서](#docs)
+[시작하기](#quick-start) · [제작 흐름](#workflow) · [스킬 12개](#skills) · [Kimodo 현황](#kimodo) · [실행 가이드](#generation) · [문서](#docs)
 
 <img src="docs/assets/readme/hero.svg" width="100%" alt="VFX Skills 시스템 지도: 현재 요청과 기존 기록에서 Blender, Higgsfield, Hybrid 경로를 선택하고 실제 후보 검수와 기술 납품으로 연결합니다.">
 
@@ -25,7 +25,7 @@ Blender와 생성형 영상 도구를 연결해 검수 가능한 결과물로 �
 ---
 
 > **이 저장소는 영상 생성 모델이나 물리엔진 자체가 아닙니다.**
-> Codex가 읽는 **제작 스킬 11개**, 현재 작업의 **라우팅 설정**, Higgsfield의 유료 제출을 관리하는 **Python 실행기**를 담고 있습니다. 원본 영상·모델·Blender 장면·계정 정보는 로컬에 분리합니다.
+> Codex가 읽는 **제작 스킬 12개**, 현재 작업의 **라우팅 설정**, Higgsfield의 유료 제출을 관리하는 **Python 실행기**를 담고 있습니다. 원본 영상·모델·Blender 장면·계정 정보는 로컬에 분리합니다.
 
 ## 한눈에 보는 네 가지 역할
 
@@ -123,7 +123,7 @@ python3 tools/install_skills.py
 python3 tools/install_skills.py --apply
 ```
 
-기본 등록 위치는 사용자 홈의 `.codex/skills`입니다. 같은 이름의 기존 스킬 11개만 `.local/skill-backups/`에 백업한 뒤, 이 저장소로 심볼릭 링크를 연결합니다. 다른 스킬은 건드리지 않습니다.
+기본 등록 위치는 사용자 홈의 `.codex/skills`입니다. 등록 목록과 같은 이름의 기존 스킬만 `.local/skill-backups/`에 백업한 뒤, 이 저장소로 심볼릭 링크를 연결합니다. 다른 스킬은 건드리지 않습니다.
 
 진행 중인 턴이 변경된 설명을 즉시 다시 읽는다고 가정하지 말고 **다음 턴이나 새 세션에서** 사용 여부를 확인합니다. 저장소를 이동했다면 설치 명령을 다시 실행하세요.
 
@@ -177,6 +177,39 @@ vfx doctor
 
 ## 제작 흐름
 
+### 이 테이블 시리즈의 기본 협업 루프
+
+```mermaid
+flowchart LR
+    A[러프안] --> B[질문하며 기획 고도화]
+    B --> C[컷·전환·액션 이미지 콘티]
+    C --> D[전체 단순 메시 프리비즈]
+    D --> E[나란히 대조 · 사용자 최종 컨펌]
+    E --> F[입력·견적·지출 권한 확인]
+    F --> G[Higgsfield 제작 · 회수]
+    G --> H{실제 결과 검수}
+    H -->|의도 충족| I[납품]
+    H -->|불일치 증거와 대안| B
+```
+
+기획이 말이 되는지 에이전트가 판단하되, **본편 제작의 최종 컨펌은 사용자**가 합니다.
+승인은 콘티·프리비즈 버전에 묶고, 중요한 변경은 해당 구간을 다시 대조합니다.
+결과가 어긋나면 자동 재결제하지 않고 실제 실패 장면을 가지고 대화로 돌아옵니다.
+상세 규칙: [협의형 제작 루프](skills/miniature-film-director/references/collaborative-production-loop.md).
+
+```sh
+python3 vfx.py route hybrid plan
+python3 vfx.py route hybrid storyboard
+python3 vfx.py route hybrid previs
+python3 vfx.py route hybrid prompt --specialist causal_staging
+```
+
+이 명령은 담당 스킬을 고르는 **라우팅**입니다. 전체 생성·대화·컨펌을 자동 수행하는
+무인 실행기가 아닙니다. 실제 제작은 스킬을 읽은 에이전트가 기존 `film_state.json`과
+유료 실행기를 연결해 수행합니다. 창작 컨펌과 지출 권한은 별도로 확인합니다.
+
+### 제작 경로별 책임
+
 ```mermaid
 flowchart TD
     A["현재 요청 + 기존 작업 기록"] --> B["도구와 현재 단계 선택"]
@@ -223,7 +256,7 @@ python3 vfx.py route hybrid prompt --specialist acting --specialist food
 
 <a id="skills"></a>
 
-## 11개의 제작 스킬
+## 12개의 제작 스킬
 
 스킬은 모든 작업에서 순서대로 실행하는 체크리스트가 아닙니다. **현재 단계의 담당 스킬과 필요한 전문 지식만** 읽습니다.
 
@@ -233,6 +266,7 @@ python3 vfx.py route hybrid prompt --specialist acting --specialist food
 | 레퍼런스 분석 | [film-reference-breakdown](skills/film-reference-breakdown/SKILL.md) | 시간별 행동·소품·접촉·질감 관찰과 추론 구분 |
 | 이미지 연출 | [visual-image](skills/visual-image/SKILL.md) | 캐릭터·재질·미술 기준과 비교 이미지 방향 |
 | 영상 연출 | [visual-video](skills/visual-video/SKILL.md) | 카메라·조명·편집·CG를 관찰 가능한 지시로 변환 |
+| 개연성 사전 설계 | [animation-causal-staging](skills/animation-causal-staging/SKILL.md) | 등장 근거·원인→경로→결과, 판타지/편집 구분, 전환 이미지·메시 프리비즈 |
 | 캐릭터 연기 | [character-performance-animation](skills/character-performance-animation/SKILL.md) | 의도·감정·시선·키포즈·타이밍·후속 움직임 |
 | 인체 움직임 | [human-motion-biomechanics](skills/human-motion-biomechanics/SKILL.md) | 관절 가동 범위, 그립, 하중, 체중 이동과 균형 |
 | 음식·유체 | [food-vfx-director](skills/food-vfx-director/SKILL.md) | 붓기·끓기·점도·증기·재료 스케일과 물성 |
@@ -268,7 +302,7 @@ VFX Skills/
 │   ├── catalog.py                 # 스킬 검사, 라우팅, 도구 탐색
 │   ├── jobs.py                    # Higgsfield 요청·승인·1회 제출
 │   └── cli.py                     # 명령 인터페이스
-├── skills/                        # 스킬 11개와 참조·보조 코드
+├── skills/                        # 스킬 12개와 참조·보조 코드
 ├── examples/                      # 개인정보 없는 설정 예시
 ├── tests/                         # 오프라인 회귀 테스트
 ├── tools/                         # 설치·이관·정리·게시 전 검사

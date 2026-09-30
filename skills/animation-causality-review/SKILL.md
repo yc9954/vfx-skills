@@ -29,6 +29,7 @@ geometric pair. Then read all references relevant to that inventory:
 
 | When present | Required detail |
 |---|---|
+| Disputed object appearances, effect motivation or covered scene edits | Compare the existing [causal staging](../animation-causal-staging/SKILL.md) beat contract if supplied: source, cue, path, result, persistence and full/local coverage. Missing planning does not excuse visible faults. |
 | Character travel, balance or hands | [Locomotion and acting](references/locomotion-and-acting.md) for physical/body evidence |
 | Character acting, thought/emotional beats, gaze/face, timing, appeal or moving holds | Read the shared [character performance QA](../character-performance-animation/references/performance-qa.md) and applicable performance reference; keep candidate verdict ownership here |
 | Loaded reach/lift/carry/pour, disputed ROM, weight transfer or kinetic chain | Read the shared [motion contract](../human-motion-biomechanics/references/motion-language.md) and affected [joint](../human-motion-biomechanics/references/joint-rom-and-coordination.md), [load](../human-motion-biomechanics/references/load-balance-and-handling.md) or [grasp](../human-motion-biomechanics/references/grasp-and-tool-use.md) reference; keep verdict ownership here |
@@ -59,6 +60,10 @@ they do not approve the rest of the animation or technical delivery.
   pass cannot fill a missing performance claim, and a prompt cannot verify playback.
 - Inspect critical interactions before first possible touch, through contact and
   release, and afterward. A legal pickup cannot erase an illegal approach.
+- Distinguish literal action, declared fantasy and editorial replacement. A wipe
+  can conceal a scene edit but cannot prove an unseen safe pickup. For requested
+  full-screen coverage inspect every corner during the cut; local masks are not
+  equivalent. Match cuts and sound bridges can motivate edits, not establish physics.
 - Measure evaluated scene geometry, not a target compared to the function that
   generated it. Name units, tolerances, surfaces, phases and sampling resolution.
 - Root clearance, ankle drift, wrist reach, static overlap, containment and swept

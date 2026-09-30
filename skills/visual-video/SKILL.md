@@ -37,6 +37,7 @@ to fill a template. Beat timing is not necessarily a camera cut.
 | Human reach, lifting, carrying, pouring, push/pull or tool-use prompting | Read the shared [human-motion prompt language](../human-motion-biomechanics/references/motion-language.md); use only the action's needed joint/load cues |
 | Food/fluid behavior, particulate scale or culinary-effect QA | Use installed `food-vfx-director`; keep only shot, visibility and lighting intent here |
 | Prompt continuity or failure repair | [fixes-and-skeletons.md](references/fixes-and-skeletons.md) |
+| Unmotivated appearances, arbitrary effects, or unclear scene transitions | [animation-causal-staging](../animation-causal-staging/SKILL.md) for entity sources, triggers, visible consequences and before/coverage/reveal/result boards |
 | Choreography, dance, musical rhythm or varied character performance | [choreography-brief.md](references/choreography-brief.md) |
 | Still keyframes for an animatic | [animatic-keyframes.md](references/animatic-keyframes.md); its faceless/cold racing examples are not universal rules |
 | A requested race/speed spot | [race-and-speed.md](references/race-and-speed.md), after animatic-keyframes |
@@ -65,6 +66,14 @@ breathing, stabilization drift or unrequested cuts. Move attention with blocking
 timed action and local light/material contrast. For **CINEMATIC/PROMO**, motivated
 coverage, camera movement, lens/focus changes and edits are available; specify their
 start, end, pace and visible purpose. Never use promo freedom in a projection master.
+
+A fixed projection camera does not forbid an explicitly requested scene cut.
+For a full-screen fan wipe, cover the entire raster, including corners, before
+the hidden edit; do not reinterpret it as plate-local effects. Draw the coverage
+and reveal states when the user requests images, and inspect those actual images.
+For this tabletop series, pair completed boards with full-duration simple-mesh
+previs and a side-by-side time-linked comparison before final confirmation; follow
+the [previs handoff](../animation-causal-staging/references/storyboard-previs.md).
 
 Use the smallest useful artifact: one prompt, a timed beat sheet, or a treatment.
 For contact stories retain actor/prop IDs, start/end support states, the event

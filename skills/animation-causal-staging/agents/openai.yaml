@@ -1,0 +1,4 @@
+interface:
+  display_name: "Animation Causal Staging"
+  short_description: "Make objects, actions and transitions feel motivated"
+  default_prompt: "Use $animation-causal-staging to explain and storyboard the visible causes, object paths and scene transitions before generating my animation."

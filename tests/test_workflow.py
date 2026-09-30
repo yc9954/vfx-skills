@@ -180,6 +180,18 @@ class JobTests(unittest.TestCase):
 
 
 class CatalogTests(unittest.TestCase):
+    def test_collaborative_planning_routes(self):
+        for backend in ("higgsfield", "blender", "hybrid"):
+            self.assertIn("animation-causal-staging", catalog.route(backend, "plan")["skills"])
+            self.assertIn("visual-image", catalog.route(backend, "storyboard")["skills"])
+            self.assertEqual(catalog.route(backend, "previs")["skills"],
+                             ["blender-contact-animation", "film-render-delivery"])
+
+    def test_causal_specialist_deduplicates(self):
+        result = catalog.route("hybrid", "plan", ["causal_staging"])
+        self.assertEqual(result["skills"].count("animation-causal-staging"), 1)
+        self.assertEqual(catalog.route("higgsfield", "generate")["skills"], ["blender-seedance-handoff"])
+
     def test_catalog_links(self):
         self.assertEqual(catalog.validate()["failures"], [])
 

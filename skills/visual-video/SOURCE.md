@@ -18,6 +18,9 @@
   primary-source evidence plus installed Higgsfield CLI snapshot, projection vs
   footage routing, and qualification of old universal model/flag/audio claims.
   New research-based instructions are local synthesis, not upstream endorsement.
+- Further local routing changes preserve the selected image-first or Blender path,
+  make previs conditional, and distinguish per-plate foreground removal from whole
+  solid-color draft tiles. These changes are not upstream provider guarantees.
 
 The upstream NOTICE retains the acknowledgement of methods adapted after studying
 agentara/skills (MIT, Copyright 2026 agentara). No code from that separate repo is

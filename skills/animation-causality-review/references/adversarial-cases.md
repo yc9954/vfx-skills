@@ -4,6 +4,26 @@ Use these as behavioral challenges, not a checklist to mark passed without
 running or inspecting the relevant case. Preserve the observed bad result; do
 not tune the expected answer or exclude its interval to restore approval.
 
+## Mocap imported, scene interaction still authored incorrectly
+
+A walking take is credited, but the actor changes to a stationary cooking loop,
+the prop follows an independent time curve and the source has no captured fingers.
+Only a wrist-target report is supplied as proof of natural handling.
+
+Required verdict: source provenance may pass for the credited frames; held-object
+causality, fingers, transitions and performance remain failed or unverified by
+their actual evidence. Inspect the complete action, not the dataset's reputation.
+
+## A correction improves its own metric
+
+A normal-push modifier reduces a sampled hand gap while increasing cuff crossings.
+The report excludes hand-adjacent triangles and reuses the scene pathname after it
+was overwritten. A small critical-frame subset is labelled whole-film validation.
+
+Required verdict: reject the unsupported whole-film and version claims. Reopen
+the immutable saved input, inspect exclusions and measure the affected surfaces.
+Keep the rejected correction and restore the last valid version for further work.
+
 ## Legal entry after an illegal approach
 
 A net and seafood both follow kinematic curves. The closed bag sweeps through

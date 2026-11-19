@@ -1,6 +1,6 @@
 ---
 name: visual-image
-description: Develop reference-grounded visual direction, style comparisons, character sheets, storyboard keyframes and image prompts. Supports image generation with concrete materials and preservation rules; does not substitute a prompt for a requested image or claim an image is a rigged 3D asset.
+description: Develop reference-grounded visual direction, style comparisons, character sheets, storyboard keyframes and image prompts. Includes image/Tripo set integration, material/water boundaries and projection layout checks. Supports image generation with concrete materials and preservation rules; does not substitute a prompt for an image or claim a still proves usable 3D geometry.
 license: CC-BY-4.0 (adapted from Serge Shima, github.com/smixs/visual-skills; see SOURCE.md)
 ---
 
@@ -24,6 +24,7 @@ Keep explicit user exclusions even when rephrasing positively.
 | Match a supplied style/reference | [vision-decomposer.md](references/vision-decomposer.md); separate observation from inference, not mandatory keyword-only output |
 | Lighting, palette and material vocabulary | [creative-direction.md](references/creative-direction.md) |
 | Cinematic miniature look without changing projection geometry | [projection-look-gate.md](references/projection-look-gate.md) |
+| Image/Tripo sets, cropped backgrounds, mismatched water/materials or separate moving parts | [generated-set-integration.md](references/generated-set-integration.md) |
 | Complex prompt organization | [prompt-framework.md](references/prompt-framework.md) |
 | Character identity / turnarounds / expressions | [characters.md](references/characters.md) and, when needed, [character-design.md](references/patterns/character-design.md) |
 | Story sequence / keyframes | [storyboards.md](references/storyboards.md) |

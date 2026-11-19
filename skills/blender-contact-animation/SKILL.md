@@ -1,6 +1,6 @@
 ---
 name: blender-contact-animation
-description: Build or repair Blender character rigs, locomotion, dance, expressive motion and prop interactions with anatomical calibration and contact-aware transitions. Includes conditional Kimodo retargeting and engine transfer; review-only animation faults belong to animation-causality-review and render-only work to film-render-delivery.
+description: Build or repair Blender character rigs, locomotion, dance, expressive motion and prop interactions with anatomical calibration and contact-aware transitions. Includes public mocap retargeting, native prop ownership, evaluated shoe/cloth contact repair, conditional Kimodo and engine transfer; review-only faults belong to animation-causality-review and render-only work to film-render-delivery.
 ---
 
 # Blender 접촉·동작 제작
@@ -37,6 +37,9 @@ biomechanics floor와 접촉을 지키며 블로킹/리그/곡선으로 구현�
 - Kimodo 기능 조사·생성 방식 선택: [kimodo-capabilities.md](references/kimodo-capabilities.md).
   멈칫거림·클립 경계 문제는 [kimodo-continuity.md](references/kimodo-continuity.md)를 함께 읽는다.
 - BVH/FBX 리타깃과 단위: [motion-and-units.md](references/motion-and-units.md).
+- 공개 모캡으로 교체, 소품 그룹/지지 전환, 신발·의상 관통 또는 접촉 보정 회귀:
+  [mocap-and-contact-repair.md](references/mocap-and-contact-repair.md)를 함께 읽는다.
+  소스 사용 사실, 리타깃 성공, 실제 그립·접지와 정상속도 연기를 별도로 확인한다.
 - Unreal 이전이 실제 요청됐거나 Blender로 필요한 기능을 구현할 수 없을 때:
   [engine-transfer.md](references/engine-transfer.md).
 

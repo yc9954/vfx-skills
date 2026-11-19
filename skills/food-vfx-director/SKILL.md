@@ -1,6 +1,6 @@
 ---
 name: food-vfx-director
-description: Direct food, liquid and culinary VFX behavior for CG and generative video, including pours, sauces, porridge, grains, steam, material response, source-sink causality, prompt constraints and candidate QA. Use when food physics or scale materially affects the shot; ordinary cinematography, rigging, generic contact review and rendering belong to their specialists.
+description: Direct food, liquid and culinary VFX behavior for CG and generative video, including ingredient identity, shellfish anatomy, raw-to-cooked transformations, pours, sauces, porridge, grains, steam, material response, source-sink causality and candidate QA. Use when food behavior or scale materially affects the shot; ordinary cinematography, rigging, generic contact review and rendering belong to their specialists.
 ---
 
 # Food VFX direction
@@ -42,6 +42,7 @@ A prompt that names physics is design evidence, not proof of a simulation.
 | Need | Reference |
 |---|---|
 | Material class, scale, optics and motion cues | [material-behavior.md](references/material-behavior.md) |
+| Shellfish anatomy, edible parts, episodic entrances or raw-to-cooked transformations | [ingredient-identity-and-transformations.md](references/ingredient-identity-and-transformations.md) |
 | Generative prompt block and targeted negatives | [prompting-and-negatives.md](references/prompting-and-negatives.md) |
 | Candidate inspection and verdict gates | [qa-checklist.md](references/qa-checklist.md) |
 | SURA 타락죽 milk-pour example | [tarakjuk-example.md](references/tarakjuk-example.md) |

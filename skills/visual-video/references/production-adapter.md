@@ -9,12 +9,31 @@ the user brief, current tool instructions, permissions or observed results.
 Classify the current deliverable before choosing a camera. A **projection master**
 is the registered content raster, not footage of diners looking at a table.
 Use the current physical dimensions, plate anchors, viewer directions and optical
-mapping from the project record. For this user's four-seat project, the table is
-1400×800mm; a previously approved 60° foreground treatment is a display mapping,
-not permission to tilt the entire camera or deform the plate circles. Preserve
-the current approved mapping rather than inventing a new projection formula.
-Keep readable small actors and approach routes; forest/sea continues beneath the
-plate without an empty ring. Do not add a filmed duplicate table, glass or cutlery.
+mapping from the latest project direction. The current source is one 16:9 plate on
+green, viewed at 75° elevation above the ground plane, composed in Nano Banana with
+existing @ entities before Kling scene generation. Keep the plate registered in
+that source. Four-seat placement and the final projection canvas are later tasks;
+the project's 1400×800mm table does not change the source to a table-wide frame.
+An older 60° foreground display mapping is historical and must not override this
+current source view. Keep source camera and physical projection calibration separate.
+Before Kling submission, apply the image-stage
+[near-top-down camera check](../../visual-image/references/projection-look-gate.md#near-top-down-camera-check).
+Reject frontal actors or a restaged plate even when the prompt says 75°;
+the source image must already show the requested overhead projection.
+Keep readable small actors and approach routes. At the final background stage,
+forest/sea continues beneath the plate without an empty ring; keep the requested
+green during source image/scene preparation. Reuse the user's preferred existing
+green clip. Remove each single-plate source's background and stabilize the affected
+matte boundaries before rotating/scaling/placing four foreground units; reuse one
+validated cutout when the same source repeats. Composite on the selected background
+locally, preserving original actor RGB and motion. Read the
+[per-plate compositing guidance](../../miniature-film-director/references/per-plate-compositing.md)
+at that stage. Apply a requested restart from a new
+backdrop color in the generation prompts; do not substitute a recolored old clip.
+Whole matching-color tiles with empty-border smoothing remain a scoped option for
+explicit solid-color drafts; they do not replace the current per-plate removal path.
+Generative video background editing is optional when requested, not the default final step.
+Do not add a filmed duplicate table, glass or cutlery.
 A storyboard panel may be a state change in the same view, not a new lens.
 Use blocking, local light cues, poses, pauses and sound to direct attention.
 The same content raster cannot supply four mutually consistent perspective views
@@ -56,15 +75,19 @@ result. Do not replace these events with "obey physics".
 For every input record its artifact/version, subject, role, applicable interval,
 what to inherit and what to exclude. Typical roles:
 
-- Blender guide: camera, scale, layout and tested action timing, not gray materials.
+- Plate/character image: source camera, anchors, identity and look; no new 3D guide required.
+- Optional Blender guide: camera, scale, layout and tested action timing, not gray materials.
 - Character sheet: silhouette, clothing and face, not its studio background.
 - Look frame: material/light treatment, not alternate camera or new props.
 - Boundary video/frames: actual outgoing support state and velocity, not a vague
   request for "same scene".
 
-Use enough geometry to communicate the contact, including the net opening and
-plate rim. Primitives may establish paths; they do not prove walking or a grip.
+When a geometry guide is selected, use enough geometry to communicate the contact,
+including the net opening and plate rim. Primitives may establish paths; they do
+not prove walking or a grip.
 Reference-role prose does not give a provider an unsupported input modality.
+Image direction and action prompts may proceed without previs. Select a motion
+video only for a concrete purpose and a model mode that accepts that input role.
 
 ## Capability checkpoint
 

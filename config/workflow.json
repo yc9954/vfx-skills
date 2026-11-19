@@ -8,6 +8,7 @@
   "routes": {
     "higgsfield": {
       "plan": ["miniature-film-director", "animation-causal-staging"],
+      "image": ["visual-image"],
       "storyboard": ["visual-video", "visual-image", "animation-causal-staging"],
       "previs": ["blender-contact-animation", "film-render-delivery"],
       "reference": ["film-reference-breakdown", "visual-image"],
@@ -28,6 +29,7 @@
     },
     "hybrid": {
       "plan": ["miniature-film-director", "animation-causal-staging"],
+      "image": ["visual-image"],
       "storyboard": ["visual-video", "visual-image", "animation-causal-staging"],
       "previs": ["blender-contact-animation", "film-render-delivery"],
       "reference": ["film-reference-breakdown", "visual-image"],
@@ -47,6 +49,8 @@
   },
   "rules": [
     "Preserve the user's backend and complete deliverable; do not replace a requested film with a pilot.",
+    "Follow the user's preparation method. Blender previs is optional, never an implicit prerequisite for images or generation.",
+    "For this tabletop series, remove/review each single-plate background before four-seat foreground placement and selected-background composition; reuse a validated cutout for a repeated source.",
     "Load only the current stage and required specialists. Reuse unchanged references and evidence.",
     "A status request is read-only. A fresh render/generation requires task authority.",
     "Quote is not approval. Approval belongs to one immutable request and one paid attempt.",

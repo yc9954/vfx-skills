@@ -14,6 +14,8 @@
 - Request-bound one-attempt receipts are safety guards, not a security boundary against the local file owner.
 - The user-selected backend and full deliverable take precedence over skill examples.
   Don't replace a requested finished Higgsfield video with endless Blender/plugin tests.
+- Follow the user's preparation method. Image-first work can proceed without Blender previs.
+  Select previs only when requested or needed to resolve a concrete spatial/motion issue; keep its scope minimal.
 - For skill edits read skill-creator and the target SKILL.md fully, follow required references,
   and run metadata/link validation plus bounded forward tests.
 - Before commit: run tests, skill validation, and `tools/check_publish.py` after staging.

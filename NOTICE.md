@@ -1,6 +1,6 @@
 # Sources and rights
 
-This private repository separates reusable workflow code from local production assets.
+This repository separates reusable workflow code from local production assets.
 It does not grant rights to redistribute the user's references, generated assets, models or motion data.
 
 ## Visual Skills
@@ -13,9 +13,10 @@ Local tabletop/projection and safety adaptations are identified there and in the
 
 ## Local skills and code
 
-The other nine VFX skills and the orchestration utilities are consolidated from the user's local workflow
+The other ten VFX skills and the orchestration utilities are consolidated from the user's local workflow
 and edits for this project. No new blanket open-source license is granted by this restructuring.
-Public release requires a separate licensing and content review.
+Publishing this source does not relicense third-party materials. Review their applicable
+terms before including or redistributing assets outside this source surface.
 
 ## Excluded dependencies
 

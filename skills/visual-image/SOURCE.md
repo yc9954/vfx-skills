@@ -10,6 +10,10 @@
 - Local changes: renamed entrypoint to `visual-image`; added actual-image tool
   handoff, scoped references and `style-contract.md`; added Codex UI metadata,
   this provenance record, LICENSE and NOTICE.
+- Further local adapters: projection look/view checks and
+  `generated-set-integration.md` for image/3D provenance, matched moving parts,
+  calibrated layout and water/material integration. These production rules are
+  local additions, not claims made by the upstream author or a 3D provider.
 - The project clone remains unmodified. Updates require a diff and deliberate
   reapplication of the local adapter, not replacement of working constraints.
 - No endorsement by the original author is implied.

@@ -1,6 +1,6 @@
 ---
 name: miniature-film-director
-description: Coordinate end-to-end miniature tabletop film production or resume a multi-stage Le Petit Chef-style project. Routes reference analysis, Blender construction, optional generation, candidate review and delivery at their actual stages; isolated analysis, review or render-status requests can use the corresponding specialist directly.
+description: Coordinate end-to-end miniature tabletop film production or resume a multi-stage Le Petit Chef-style project. Follow the user's image-first Higgsfield, Blender or hybrid workflow; route reference/image direction, action design, optional 3D work, generation, candidate review and delivery at their actual stages. Isolated analysis, review or render-status requests can use the corresponding specialist directly.
 ---
 
 # 미니어처 영상 제작 감독
@@ -13,14 +13,20 @@ description: Coordinate end-to-end miniature tabletop film production or resume 
 
 - 현재 요청의 범위: 원본 재현 / 같은 이야기의 새 연출 / 질감 연구 / 동작 수정.
   최근 피드백을 우선하며 과거에 거절된 안을 정답으로 재사용하지 않는다.
+- 사용자가 잘 나왔던 프롬프트로 같은 과정을 다시 하라고 하면 저장된 실제 요청·참조
+  순서·역할을 복원한다. 요청한 변경만 적용하고 카메라·캐릭터 크기·배치·소품·동작
+  문장을 새로 쓰거나 빠뜨리지 않는다. 스킬의 새 예문으로 성공했던 원문을 대체하지 않는다.
 - 실제 입력 영상·이미지·기존 장면을 확인한다. 파일명, 길이, 수정 시각만으로
   “방금 생성한 영상”이라고 단정하지 않는다. 없으면 그 사실부터 밝힌다.
 - 길이, FPS, 화면비, 투사/일반 영상, 카메라, 음향, 비용 상한을 현재 지시에서
   복원한다. 10초 연구는 2분 이야기의 완성본이 아니다.
+- 스토리 개정, 화면 치수/시점, 자산과 행동을 같은 버전에 묶는다.
+  [인계 규약의 개정·배치 계약](references/handoff-contract.md#스토리-개정과-배치-계약)을
+  적용하고, 다른 프로젝트의 카메라 각도나 과거 장면의 등장 순서를 전역 기본값으로 쓰지 않는다.
 - 기본 제작 경로는 사용자가 선택한 도구를 따른다. 단순한 Blender 접촉 애니메이션으로
   가능한 작업을 물리라는 이름만 얻기 위해 Unreal로 이전하지 않는다.
 - 현재 산출물과 실행 경로는 [deliverable-routing.md](references/deliverable-routing.md)로 고정한다.
-  Higgsfield 최종 생성 요청을 받았다면 기존 유효한 가이드를 재사용해 생성 단계로 간다.
+  Higgsfield 최종 생성 요청을 받았다면 선택한 이미지·프롬프트와 기존 유효한 입력을 사용해 생성 단계로 간다.
   가이드 완성이나 플러그인 시험을 본편 완성으로 보고하지 않는다.
 
 ## 단계별로 필요한 스킬만 사용
@@ -41,7 +47,7 @@ description: Coordinate end-to-end miniature tabletop film production or resume 
 | 외형·재질 기준 이미지 설계 | `visual-image` | 목표 질감과 불합격 기준; 실제 이미지는 생성 도구로 제작 |
 | Blender 동작·접촉 제작 | `blender-contact-animation` | 연속된 지지·그립·이동이 있는 편집 가능 장면 |
 | 음식·유체 물성 설계/검수 | `food-vfx-director` | 재료 상태, 소스→싱크, 스케일, 생성 제약과 후보 QA |
-| 요청된 AI 영상 경로 | `blender-seedance-handoff` | 짧은 시험, 연속성·비용 기록, 실제 생성 영상 |
+| 요청된 AI 영상 경로 | `blender-seedance-handoff` | 선택한 이미지/가이드 입력, 연속성·비용 기록, 실제 생성 영상 |
 | 어색함 검토 및 납품 전 검수 | `animation-causality-review` | 통과 범위 / 실패 / 미검증을 구분한 기록 |
 | GPU 렌더와 파일 납품 | `film-render-delivery` | 재생 검증된 영상, 원본, 해당 버전의 검사 결과 |
 
@@ -71,30 +77,43 @@ description: Coordinate end-to-end miniature tabletop film production or resume 
 ## 제작 순서와 중단 기준
 
 이 테이블 시리즈의 기본 제작 루프는 [collaborative-production-loop.md](references/collaborative-production-loop.md)를 따른다.
-러프안→질문/기획 보완→이미지 콘티→전체 단순 메시 프리비즈→나란히 대조/최종 컨펌→
-Higgsfield 제작→실제 후보 검수이며, 의도 불일치는 자동 재결제 없이 기획 대화로 돌아온다.
+현재는 초록 배경의 한 접시 이미지→기존 `@` 엔티티 배치→Kling 장면→접시별 배경 제거·경계 보정→
+네 좌석 배치→선택한 배경 합성→실제 후보 검수다. 합성 단계에서는
+[접시별 분리·합성 지침](references/per-plate-compositing.md)을 읽는다.
+Blender 프리비즈는 요청 또는 구체적 3D 검사가 필요할 때
+선택하며 콘티·이미지·생성의 필수 선행 단계로 두지 않는다.
+이 시리즈의 탑뷰는 바닥 기준 고도각 75도, 수직 하향에서 15도 기울어진 시점이다.
+접시뿐 아니라 인물·소품도 같은 시점을 따른다. [이미지 시점 검수](../visual-image/references/projection-look-gate.md#near-top-down-camera-check)에서
+실제 머리·어깨 윗면과 몸의 단축을 확인한다. 정면 인물·낮은 시점으로 나온 기준 이미지는
+Kling 입력으로 넘기지 않는다. 프롬프트에 75도를 적었다는 사실을 통과 근거로 삼지 않는다.
+최신 사용자 선택에 따라 제작 배경은 초록색으로 통일하고 기존에 잘 나온 초록 소스를 재사용한다.
+각 한 접시 영상에서 접시·캐릭터·소품을 함께 분리하고 경계를 확인한 뒤 네 좌석에 배치한다.
+같은 소스를 네 번 쓰면 검수한 한 분리본을 재사용한다. 서로 다른 소스는 각각 분리한다.
+원본과 분리 마스크를 보존하고 초록색 옷을 배경색만으로 지우지 않는다.
+새 배경색으로 처음부터 다시 만들라는 요청은 생성 프롬프트부터 적용한다. 이전 영상의
+키잉·색 변환본으로 대체하지 않으며, 이전 자산과 제출 기록은 보존한다.
+초록 캔버스의 빈 사각 외곽 스무딩은 과거 초안/명시적 단색 배치에만 사용한다.
+현재 배경 교체에서는 전경 경계를 보정하며, 전체 인물에 블러나 일괄 색 변환을 적용하지 않는다.
+사용자가 배경 이미지를 주면 분리본과 로컬 합성한다. 생성형 배경 편집은 요청한 경우에만 선택한다.
 상태/조사만 요청된 경우 제작 루프를 시작하지 않는다.
 
 1. 기존 자산을 검토해 재사용한다. 라이선스·리깅·텍스처가 확인된 것부터 쓴다.
    무료 다운로드 가능과 상업적 투사·배포 권한은 구분한다.
-2. 새 제작에서는 이야기의 핵심 상호작용을 먼저 완성한다. 걷기→멈춤→집기라면 준비·그립·들기까지
-   포함한 짧은 시험을 만든다. 사용자의 기본 테스트 요청은 대략 100프레임/짧은 클립으로
-   해석하되, 원인과 결과가 잘리지 않도록 범위를 설명한다.
-   먼저 scene objective, character want, emotional change, partner relation과 성격 의도를 정하고,
-   설치된 `character-performance-animation`으로 thought beat→key pose→timing/gaze/face→secondary
-   motion의 performance contract를 만든다. 그 다음 biomechanics가 같은 포즈·행동을 ROM·하중·
-   지지·그립으로 제한한다. 물리 제약 때문에 포즈가 바뀌면 연기 의도를 유지한 대체 포즈를 다시 잡는다.
-   사람이 하중을 다루면 공통 motion contract의 시작/끝 지지, 양손 역할, 작업 범위,
-   kinetic chain, 체중 이동과 settle을 먼저 기록해 Blender·생성 프롬프트·검수에 같은 버전을 넘긴다.
-3. 비싼 전체 제작 전에 동작 시험과 별도로, 고정된 실제 투사 시점의 look frame을 만든다.
-   `visual-image`의 projection look gate로 시선 우선순위·명암·재질·실제 표시 크기를 확인한다.
-   내부 단편 제작 판단과 사용자 승인은 구분한다. 회색 접촉 진단 이미지를 최종 미술 기준으로
-   승격시키지 않는다. 동작과 접촉을 확인한 뒤 재질·조명·물·소리의 밀도를 높인다. 질감만 수정하는 요청에는
-   기존 동작을 유지하고 그 변경의 영향을 검토한다. 각 재료의 정체와 역할은
-   처음부터 기록하되, 보이지 않는 미세 모델링에 시간을 먼저 쓰지 않는다.
+2. 선택한 경로의 첫 산출물부터 만든다. 이미지 중심 작업이면 접시 원본과 캐릭터 기준
+   이미지로 구도·외형·재질을 정한다. 실제 이미지를 검사하고 `visual-image`의 projection
+   look gate에서 현재 소스/최종 출력에 필요한 시선 우선순위·명암·재질·표시 크기를 확인한다.
+   기획에 필요한 행동은 준비·지지/그립·실행·반응·끝 상태로 구체화한다. 연기가 중요하면
+   `character-performance-animation`의 의도·키포즈·시선·타이밍 지시를, 하중 동작이면
+   공통 motion contract의 양손 역할·지지·체중 이동·settle을 사용한다. 필요한 항목만
+   이미지·생성 프롬프트·선택한 가이드·후보 검수에 같은 버전으로 연결한다.
+3. 짧은 시험이나 프리비즈는 사용자가 요청했거나 해결할 구체적 문제가 있을 때 선택한다.
+   확인할 문제와 최소 구간을 밝히고 이미지·로컬 합성·3D 중 맞는 수단을 쓴다.
+   Blender 동작 시험을 선택했다면 준비·그립·들기 등 원인과 결과가 잘리지 않게 한다.
+   회색 접촉 진단 이미지를 최종 미술 기준으로 승격시키지 않는다. 질감만 수정하는 요청에는
+   기존 동작을 유지하고 그 변경의 영향을 검토한다. 보이지 않는 미세 모델링에 시간을 먼저 쓰지 않는다.
    음식·유체가 핵심이면 `food-vfx-director`의 물성/스케일/소스-싱크 계약을 적용하되,
    카메라 연출·Blender 접촉·장면 전체 승인과 기술 납품의 책임은 합치지 않는다.
-   새 인체 리그는 관절/스킨→전신 협응과 지지→시간에 따른 연기를 구분해 확인한다.
+   새 인체 리그를 만드는 경로에서는 관절/스킨→전신 협응과 지지→시간에 따른 연기를 구분해 확인한다.
    설치된 제작/검수 스킬의 전신 참조에 따라 해당 역할의 걷기·회전·낮은/높은 도달·운반 등
    필요한 완결 행동으로 사용 가능 범위를 남긴다. 손 취급은 손 전용 참조도 적용한다.
    첫 리그의 잘못된 관절 축·IK·웨이트를 전체 배우에 복제하지 않는다. 검증된 제어를

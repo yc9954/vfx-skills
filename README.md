@@ -11,7 +11,7 @@ Blender와 생성형 영상 도구를 연결해 검수 가능한 결과물로 �
   <img alt="Python 3.10 이상" src="https://img.shields.io/badge/Python-3.10%2B-3978a8?style=flat-square">
   <img alt="12 specialist skills" src="https://img.shields.io/badge/Specialist_skills-12-c49b53?style=flat-square">
   <img alt="Reference first" src="https://img.shields.io/badge/Workflow-Reference_first-246b69?style=flat-square">
-  <img alt="Private workspace" src="https://img.shields.io/badge/Workspace-Private-475569?style=flat-square">
+  <img alt="Source workspace" src="https://img.shields.io/badge/Workspace-Source-475569?style=flat-square">
 </p>
 
 [시작하기](#quick-start) · [제작 흐름](#workflow) · [스킬 12개](#skills) · [Kimodo 현황](#kimodo) · [실행 가이드](#generation) · [문서](#docs)
@@ -94,7 +94,7 @@ Blender와 생성형 영상 도구를 연결해 검수 가능한 결과물로 �
 
 ### 1 · 저장소 열기
 
-기존 환경에서는 **`VFX Skills` 폴더**를 엽니다. 새 환경에서는 저장소 접근 권한이 있는 계정으로 클론합니다.
+기존 환경에서는 **`VFX Skills` 폴더**를 엽니다. 새 환경에서는 저장소를 클론합니다.
 
 ```sh
 git clone https://github.com/yc9954/vfx-skills.git "VFX Skills"
@@ -177,36 +177,54 @@ vfx doctor
 
 ## 제작 흐름
 
-### 이 테이블 시리즈의 기본 협업 루프
+### 이 테이블 시리즈의 현재 이미지 중심 경로
 
 ```mermaid
 flowchart LR
-    A[러프안] --> B[질문하며 기획 고도화]
-    B --> C[컷·전환·액션 이미지 콘티]
-    C --> D[전체 단순 메시 프리비즈]
-    D --> E[나란히 대조 · 사용자 최종 컨펌]
-    E --> F[입력·견적·지출 권한 확인]
-    F --> G[Higgsfield 제작 · 회수]
-    G --> H{실제 결과 검수}
-    H -->|의도 충족| I[납품]
-    H -->|불일치 증거와 대안| B
+    A["Nano Banana · 접시 원본"] --> B["기존 @ 엔티티 배치"]
+    B --> C["동작 지시 · 필요한 콘티"]
+    C --> D["Kling 3.0 · 한 접시 장면"]
+    D --> R["접시별 배경 제거 · 경계 보정"]
+    R --> E["투명 전경 · 네 좌석 배치"]
+    E --> F["선택한 배경 · 로컬 합성"]
+    F --> G{실제 결과 검수}
+    G -->|의도 충족| H[납품]
+    G -->|해당 입력·동작·합성 수정| C
 ```
 
-기획이 말이 되는지 에이전트가 판단하되, **본편 제작의 최종 컨펌은 사용자**가 합니다.
-승인은 콘티·프리비즈 버전에 묶고, 중요한 변경은 해당 구간을 다시 대조합니다.
+한 접시의 **16:9·초록 배경·바닥 기준 고도각 75도** 이미지에서 접시의 형태·위치·크기를
+먼저 정하고 유지합니다. 기존 엔티티를 배치한 이미지와 상세 동작을 Kling에 전달합니다.
+75도는 수직 하향에서 15도 기울어진 탑뷰에 가까운 시점입니다. 인물도 머리·어깨 윗면과
+몸의 단축이 보이는지 실제 이미지로 확인하고, 정면 시점으로 나온 이미지는 Kling에 넘기지 않습니다.
+각 한 접시 영상에서 배경을 제거하고 경계를 보정한 뒤 네 좌석에 배치합니다.
+접시·캐릭터·소품·초록색 옷을 함께 보존하는지 실제 분리 결과를 먼저 확인합니다.
+같은 영상 반복 사용이면 검수한 한 분리본을 재사용하며, 서로 다른 영상이면 각각 분리합니다.
+한 접시의 16:9 소스와 최종 투사 캔버스의 비율·좌표는 별도로 맞춥니다.
+초록색은 이미지와 한 접시 영상의 제작 배경이며, 이후에는 투명 전경을 사용합니다.
+사용자가 제공/선택한 배경에 로컬 합성하고 원본의 캐릭터 크기·시점·동작을 유지합니다.
+전체 합성본을 Kling에 다시 넣어 배경을 그리는 단계는 요청한 경우에 선택합니다.
+현재는 잘 나온 기존 초록 소스와 저장된 성공 프롬프트를 재사용합니다. 새 배경색으로
+처음부터 재제작하라는 요청은 생성 프롬프트부터 적용하며 이전 소스의 색 변환으로 대신하지 않습니다.
+단색 초안의 사각 외곽 스무딩과 전경 분리 경계 보정은 구분합니다.
+상세 규칙: [접시별 분리·합성](skills/miniature-film-director/references/per-plate-compositing.md).
+
+**Blender 프리비즈는 선택 사항**입니다. 요청받았거나 특정 이동·가림·접촉·타이밍을 3D로
+확인해야 할 때 필요한 구간에 사용합니다. 이미지 제작이나 Kling 생성에 앞서 전체 프리비즈와
+대조본 컨펌을 일률적으로 요구하지 않습니다. 창작 협의는 실제 이미지·행동과 요청 범위에
+맞추고, 유료 실행 전에는 입력·계정·견적·시도 범위에 맞는 현재 권한을 확인합니다.
 결과가 어긋나면 자동 재결제하지 않고 실제 실패 장면을 가지고 대화로 돌아옵니다.
 상세 규칙: [협의형 제작 루프](skills/miniature-film-director/references/collaborative-production-loop.md).
 
 ```sh
-python3 vfx.py route hybrid plan
-python3 vfx.py route hybrid storyboard
-python3 vfx.py route hybrid previs
-python3 vfx.py route hybrid prompt --specialist causal_staging
+python3 vfx.py route higgsfield image
+python3 vfx.py route higgsfield prompt --specialist causal_staging
+python3 vfx.py route higgsfield generate
 ```
 
 이 명령은 담당 스킬을 고르는 **라우팅**입니다. 전체 생성·대화·컨펌을 자동 수행하는
 무인 실행기가 아닙니다. 실제 제작은 스킬을 읽은 에이전트가 기존 `film_state.json`과
 유료 실행기를 연결해 수행합니다. 창작 컨펌과 지출 권한은 별도로 확인합니다.
+프리비즈를 선택한 작업에서는 `python3 vfx.py route hybrid previs`로 해당 담당 스킬을 고릅니다.
 
 ### 제작 경로별 책임
 
@@ -254,6 +272,19 @@ python3 vfx.py route hybrid prompt --specialist acting --specialist food
 
 인코딩 수정 때문에 모션을 재생성하지 않습니다. 유효한 가이드가 있는데 플러그인 시험만 반복하지 않습니다. 불변이 확인된 근거는 재사용하되, 변경의 영향을 받는 접촉·화면·출력은 다시 확인합니다. 전체 영상을 요청받았다면 가이드나 시험편만 만든 상태를 완료라고 보고하지 않습니다.
 
+### 실제 제작에서 보강한 기준
+
+모캡 출처와 사용 구간, 리타깃, 실제 소품 제어, 표면 접촉, 정상속도 연기는 각각 확인합니다.
+이미지·Tripo 자산도 생성 성공만으로 부피·맞물림·수중 배치가 검증되지는 않습니다.
+
+- [모캡과 접촉 수리](skills/blender-contact-animation/references/mocap-and-contact-repair.md): 단위·전이, 순환 없는 소품 제어, 신발 전체와 소매 검사.
+- [저장 장면의 접촉 근거](skills/animation-causality-review/references/evaluated-contact-evidence.md): 실제 변형 표면, 검사 제외 영역, 부분 검사와 전체 검사 구분.
+- [배경·물·재질 통합](skills/visual-image/references/generated-set-integration.md): 현재 시점과 투사 치수, 분리 부품 맞물림, 수면 경계와 불꽃 형상.
+- [식재료 정체성과 변환](skills/food-vfx-director/references/ingredient-identity-and-transformations.md): 조개·관자·전복의 구조, 에피소드 등장, 잡아 올리는 중 조리 변화.
+- [렌더 재개](skills/film-render-delivery/references/gpu-and-process-safety.md): 불변 입력과 외부 의존성, 구간별 출력, 실제 상태 확인.
+
+이는 스킬의 제작·검수 지침입니다. 범용 충돌 솔버나 모캡 자동 교체 기능을 새로 구현했다는 뜻은 아닙니다.
+
 <a id="skills"></a>
 
 ## 12개의 제작 스킬
@@ -266,7 +297,7 @@ python3 vfx.py route hybrid prompt --specialist acting --specialist food
 | 레퍼런스 분석 | [film-reference-breakdown](skills/film-reference-breakdown/SKILL.md) | 시간별 행동·소품·접촉·질감 관찰과 추론 구분 |
 | 이미지 연출 | [visual-image](skills/visual-image/SKILL.md) | 캐릭터·재질·미술 기준과 비교 이미지 방향 |
 | 영상 연출 | [visual-video](skills/visual-video/SKILL.md) | 카메라·조명·편집·CG를 관찰 가능한 지시로 변환 |
-| 개연성 사전 설계 | [animation-causal-staging](skills/animation-causal-staging/SKILL.md) | 등장 근거·원인→경로→결과, 판타지/편집 구분, 전환 이미지·메시 프리비즈 |
+| 개연성 사전 설계 | [animation-causal-staging](skills/animation-causal-staging/SKILL.md) | 등장 근거·원인→경로→결과, 판타지/편집 구분, 필요한 전환 이미지·선택적 프리비즈 |
 | 캐릭터 연기 | [character-performance-animation](skills/character-performance-animation/SKILL.md) | 의도·감정·시선·키포즈·타이밍·후속 움직임 |
 | 인체 움직임 | [human-motion-biomechanics](skills/human-motion-biomechanics/SKILL.md) | 관절 가동 범위, 그립, 하중, 체중 이동과 균형 |
 | 음식·유체 | [food-vfx-director](skills/food-vfx-director/SKILL.md) | 붓기·끓기·점도·증기·재료 스케일과 물성 |
@@ -506,9 +537,12 @@ python3 skills/blender-contact-animation/scripts/test_phrase_timing.py
 
 # 기술 미디어 검사 — ffmpeg/ffprobe 필요
 python3 skills/film-render-delivery/scripts/test_media_receipt.py
+
+# 단색 초안 타일 합성 — ffmpeg/ffprobe, NumPy, Pillow 필요
+python3 skills/miniature-film-director/scripts/test_compose_seat_tiles.py
 ```
 
-**2026-09-30 로컬 확인 기준:** 공통 22개 + 프레이즈 11개 + 미디어 10개 = **43개 통과**. 스킬 11개의 메타데이터·링크 검사도 통과했습니다. 이 숫자는 해당 시점의 기록이며 동적으로 갱신되는 CI 배지가 아닙니다.
+**2026-11-19 로컬 확인 기준:** 공통 24개 + 프레이즈 11개 + 미디어 10개 + Blender 관절 감사 13개 + 타일 합성 4개 = **62개 통과**. 스킬 12개의 메타데이터·링크와 UI 메타데이터 검사, 별도 에이전트의 적용 사례 2개도 확인했습니다. 실행 환경과 한계는 [변경·검증 내역](docs/session-skill-update-2026-11-19.md)에 있습니다. 이 숫자는 해당 시점의 기록이며 동적으로 갱신되는 CI 배지가 아닙니다.
 
 검증 범위에는 공백 경로·다른 작업 디렉터리·체크아웃 이동, 요청·계정 변경, 견적 상승, 잘못된 입력, 중복 시도, 불명확한 제출과 중단된 시도 기록이 포함됩니다.
 

@@ -39,6 +39,7 @@ geometric pair. Then read all references relevant to that inventory:
 | Handling, containers, rigging, liquids or contact effects | [Tools and effects](references/tools-and-effects.md) |
 | Food/fluid identity, viscosity, grains, wetness or steam is a disputed quality | Use installed `food-vfx-director` for specialized material gates; retain whole-scene verdict here |
 | Tests/approval claims, changed candidates, or delivery decisions | [Evidence and release](references/evidence-and-release.md) |
+| Saved-scene collision reports, excluded hand/cloth geometry, support gaps or disputed grouping | [Evaluated contact evidence](references/evaluated-contact-evidence.md) |
 | Handling tests, disputed approvals or suspected false greens | [Adversarial cases](references/adversarial-cases.md) |
 
 A reference split reduces irrelevant reading, not inspection coverage. Mark

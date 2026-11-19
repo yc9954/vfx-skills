@@ -71,9 +71,14 @@ A fixed projection camera does not forbid an explicitly requested scene cut.
 For a full-screen fan wipe, cover the entire raster, including corners, before
 the hidden edit; do not reinterpret it as plate-local effects. Draw the coverage
 and reveal states when the user requests images, and inspect those actual images.
-For this tabletop series, pair completed boards with full-duration simple-mesh
-previs and a side-by-side time-linked comparison before final confirmation; follow
-the [previs handoff](../animation-causal-staging/references/storyboard-previs.md).
+Follow the user's selected preparation method and
+[production loop](../miniature-film-director/references/collaborative-production-loop.md).
+The current tabletop path uses Nano Banana plate/character images and Kling action
+direction, then per-plate background removal/review before four-seat foreground placement
+and selected-background composition. Do not add a full-duration Blender previs or its
+approval as a prerequisite.
+For explicitly selected mesh previs work, use the
+[previs handoff](../animation-causal-staging/references/storyboard-previs.md).
 
 Use the smallest useful artifact: one prompt, a timed beat sheet, or a treatment.
 For contact stories retain actor/prop IDs, start/end support states, the event
@@ -98,7 +103,7 @@ pose stays stable and how breath, eyes, fingers or sleeves remain alive.
 
 If available, `visual-image` handles still look development; `miniature-film-director`
 coordinates a requested full film; `blender-seedance-handoff` executes an authorized
-hybrid job; `animation-causality-review` inspects the resulting candidate. Load
+image-based or hybrid job; `animation-causality-review` inspects the resulting candidate. Load
 companions only at their actual stage. Do not install missing companions silently.
 
 Answer in the user's language. Choose prompt language for the current tool and

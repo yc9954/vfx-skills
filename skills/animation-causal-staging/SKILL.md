@@ -69,11 +69,15 @@ Occlusion can conceal an **editorial replacement**. It does not prove an unshown
 physical pickup, collision-free path or instantaneous costume change happened.
 A shape match expresses a link, not physical causation.
 
-For this tabletop series, follow the user's standing workflow: after completing
-the storyboard, make a **whole-duration simple-mesh previs**, not only hero stills,
-and show it beside the storyboard with shared beat IDs/time controls. Read
-[storyboard-previs.md](references/storyboard-previs.md). Keep this project preference
-separate from other users' still-only requests.
+Follow the user's current preparation method. This tabletop series starts with
+a green-background one-plate Nano Banana image, existing @ entities and a Kling action brief.
+After scene generation, remove/review each plate source's background before four-seat
+foreground placement and composition on the selected background;
+see the [production loop](../miniature-film-director/references/collaborative-production-loop.md).
+Storyboards do not require a Blender previs. Use images and observable action
+instructions unless a requested or specifically needed 3D check changes that choice.
+Read [storyboard-previs.md](references/storyboard-previs.md) only for selected mesh
+previs work; preserve its requested interval or whole duration.
 
 ## Hand off observable instructions
 

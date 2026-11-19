@@ -14,7 +14,15 @@ current user request + existing film_state.json
 
 `config/workflow.json` is the machine-readable routing catalog. `catalog.py` validates skill metadata
 and local Markdown links. The CLI returns a route; it does not secretly start an agent or render.
-The 11 skills remain the knowledge layer, not 11 compulsory pipeline stages.
+The 12 skills remain the knowledge layer, not 12 compulsory pipeline stages.
+Image-first Higgsfield work can select `image`, `prompt` and `generate` directly.
+`previs` remains an explicit optional route; selecting generation does not imply Blender work.
+The current tabletop compositing order is one-plate scene → per-plate background removal and
+matte-boundary review → four-seat foreground placement → selected-background composite.
+Repeated sources reuse a validated cutout; distinct source videos are removed independently.
+User-supplied backgrounds are composited locally. Generative background editing is an explicitly
+chosen option rather than a compulsory final stage. See the
+[production loop](../skills/miniature-film-director/references/collaborative-production-loop.md).
 `tools/ci.template.yml` is an inactive CI template. It is not an installed workflow: the publishing account's
 current OAuth grant lacks the workflow permission. Local tests are the verified baseline.
 
